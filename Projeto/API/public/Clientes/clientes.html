@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body style="background-color: black; color: blanchedalmond;" >
+    <h1>Clientes</h1>
+    <form id="registro_cliente">
+        <label>Nome do cliente:</label>
+        <input type="text" name="nome_cliente">
+
+        <br>
+
+        <label>Telefone:</label>
+        <input type="text" name="tel">
+
+        <br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <a href="../index.html">Voltar</a>
+
+    <script type="text/javascript">
+        var socket = io('http://localhost:3000');
+
+        $('#registro_cliente').submit(event => {
+            var client = $('input[name=nome_cliente]').val();
+            var tel = $('input[name=tel]').val();
+
+            if (client.length && tel.length) {
+                var clientTel = {
+                    nome: client,
+                    tel: tel
+                };
+                socket.emit('clientRegister', clientTel);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes Delete</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body style="background-color: black; color: blanchedalmond;">
+    <h1>Para deletar os clientes</h1>
+
+    <form id="deleteClients">
+        <label>Nome:</label>
+        <input type="text" name="nome" placeholder="Nome completo:">
+
+        <hr>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <a href="../index.html">Voltar</a>
+
+    <script type="text/javascript">
+        const socket = io('http://localhost:3000');
+
+        $('#deleteClients').submit(event => {
+
+            const client = $('input[name=nome]').val();
+
+            if (client.length) {
+                const Client = {
+                    nome: client
+                };
+
+                socket.emit('deleteClient', Client);
+            }
+        });
+    </script>
+</body>
+</html>

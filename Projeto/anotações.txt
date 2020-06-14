@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+/*informar o navegador que isto é um arquivo html*/
+<html lang="pt-br">
+    ficarão os meta dados: 
+    <head> 
+        <meta charset="utf-8">
+        titulo: <title>Licoviski Modas</title>
+    </head>
+
+    Corpo: 
+    <body> 
+        <nav>: Navegação
+        <ul>: Lista de navegação
+        <li>: Coloca bolinha/Menus
+        <section: Seções 
+        ID: ID pode ser dado para qualquer tag, e deve ser diferente para cada TAG
+        <header>
+            /*fica em cima*/
+        </header>
+        <p>
+            /*paragrafo*/
+        </p> 
+        <footer>
+            /*rodapé*/
+        </footer>
+    </body>
+tamanho de titulos: 
+<H1-H2-H3-H4>
+<footer>: Pé
+</html>
+<a href>; outros links
+mailto=abre o email automaticamente
+tel=ligar pelo skype
+Target= acessar em outra aba
+Cor de fundo = background
+margens = margin-*
+* = Lefth, rigth
+cores = color
+tamanho = width
+font-family = tipo de fonte
+font-size = tamanho
+.nome da classe - criar uma classe
+class= usar/colocar classe

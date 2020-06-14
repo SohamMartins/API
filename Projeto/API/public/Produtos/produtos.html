@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body style="background-color: black; color: blanchedalmond;">
+    <form id="registro_produtos">
+        <h1>Produtos</h1>
+
+            <br>
+
+            <label>Nome do produto:</label><br>
+            <input type="text" name="nome_produto" placeholder="Nome:">
+
+            <br>
+
+            <label>Valor original do produto:</label><br>
+            <input type="text" name="orig_valor" placeholder="Valor original:">
+
+            <br>
+
+            <label>Valor de venda do produto:</label><br>
+            <input type="text" name="valor_venda" placeholder="Valor da venda:">
+
+            <hr>
+
+            <button type="submit">Enviar</button>
+    </form>
+
+    <a href="../index.html">Voltar</a>
+
+    <script type="text/javascript">
+        var socket = io('http://localhost:3000');
+
+        $('#registro_produtos').submit(event => {
+            var product = $('input[name=nome_produto]').val();
+            var orig_value = $('input[name=orig_valor]').val();
+            var sell_value = $('input[name=valor_venda]').val();
+
+            if (product.length && orig_value.length && sell_value.length) {
+                let prod = {
+                    nome: product,
+                    orig_value: orig_value,
+                    sell_value: sell_value
+                };
+
+                socket.emit('productRegister', prod);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista clientes</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body style="background-color: black; color: blanchedalmond;">
+
+    <h1>Olá, mundo</h1>
+
+    <br>
+
+    <a href="./Produtos/produtos.html">Produtos</a> <br>
+    <a href="./Produtos/delProds.html">Deletar os produtos</a>
+    
+    <hr>
+
+    <a href="./Clientes/clientes.html">Clientes</a> <br>
+    <a href="./Clientes/delClientes.html">Deletar os clientes</a>
+
+
+    <script type="text/javascript">
+        var socket = io('http://localhost:3000');
+            
+        if (true) {
+            socket.emit('confirm', null);
+        }
+    </script>
+</body>
+</html>

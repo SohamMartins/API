@@ -1,0 +1,56 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js init
+
+PATH: 
+  C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\Brackets\command;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Go\bin;C:\Users\Soham\AppData\Local\Programs\Python\Python38-32\Scripts;C:\Program Files (x86)\ZeroTier\One\;C:\Program Files\nodejs\;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Yarn\bin\;C:\Users\Soham\AppData\Local\Programs\Python\Python38-32\Scripts\;C:\Users\Soham\AppData\Local\Programs\Python\Python38-32\;C:\Users\Soham\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\Soham\AppData\Local\Programs\Python\Python37\;C:\Users\Soham\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\Soham\AppData\Local\Programs\Python\Python37-32\;C:\Users\Soham\AppData\Local\GitHubDesktop\bin;C:\MinGW\bin;C:\Program Files\JetBrains\CLion 2019.2.5\bin;;C:\Users\Soham\go\bin;C:\Users\Soham\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Soham\AppData\Local\Programs\Python\Python38-32;C:\Users\Soham\AppData\Local\Programs\Python\Python38-32\Scripts;C:\Users\Soham\AppData\Roaming\npm;C:\Users\Soham\.dotnet\tools;C:\Users\Soham\AppData\Local\Microsoft\WindowsApps;C:\Users\Soham\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  12.16.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:137008:13)
+      at Interface.emit (events.js:321:20)
+      at Interface._ttyWrite (readline.js:893:16)
+      at ReadStream.onkeypress (readline.js:198:10)
+      at ReadStream.emit (events.js:321:20)
+      at emitKeys (internal/readline/utils.js:438:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1160:36)
+      at ReadStream.emit (events.js:321:20)
+      at addChunk (_stream_readable.js:294:12)
+
+npm manifest: 
+  {
+    "name": "projetoLicoviski",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "dependencies": {
+      "ejs": "^3.1.3",
+      "express": "^4.17.1",
+      "socket.io": "^2.3.0"
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.4"
+    },
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node server.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
