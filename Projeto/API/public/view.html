@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de dados</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Verificando o que existe dentro dos clientes</h1>
+    <form id="clientes"> 
+        <label>Para ver a lista dos clientes cadastrados, pressione esse botão:</label>
+        <button type="submit" onclick="sendClient()">Ver</button>
+
+        <br>
+
+        <div id="client_view"></div>
+    </form>
+
+    <hr>
+
+    <h1>
+        Verificando o que existe dentro dos produtos
+    </h1>
+    <form id="produtos">
+        <label>Para ver a lista dos produtos cadastrados, pressione o botão:</label>
+        <button type="submit" onclick="sendProd()">Ver</button>
+
+        <br>
+
+        <div id="prod_view"></div>
+    </form>
+
+    <a href="./index.html">Voltar</a>
+
+    <script type="text/javascript">
+        const socket = io('http://localhost:3000');
+
+        const view_client = $('#client_view').val();
+        const view_prod = $('#prod_view').val();
+
+
+        function sendProd() {
+            socket.on('view_prod', data => {
+                view_prod.text(data);
+            });
+        }
+
+        function sendClient() {            
+            socket.on('view_client', data => {
+                view_client.text(data);
+            });
+        }      
+    </script>
+</body>
+</html>
